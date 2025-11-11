@@ -1,0 +1,107 @@
+:host {
+    --color-btn: rgb(255, 233, 39);
+    --color-secundario: rgb(33, 196, 255);
+}
+
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-bg-sign-in {
+    margin-top: 6rem;
+    background: linear-gradient(120deg, var(--color-btn), var(--color-secundario));
+    border-radius: 2rem;
+    width: 32.5rem;
+    height: 34rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem;
+    position: relative;
+}
+
+.container-bg-sign-in::before{
+    background: linear-gradient(120deg, var(--color-btn), var(--color-secundario));
+    position: absolute;
+
+}
+
+.container-sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #01031b;
+    width: 32rem;
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+
+.container-sign-in h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.container-sign-in p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.container-form input {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgb(54, 62, 70);
+    border-radius: 0.5rem;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.container-form input:focus {
+    outline: none;
+    background: #333;
+    box-shadow: 0 0 10px var(--color-btn, #00bfff);
+}
+
+.container-form input:nth-child(n+3) {
+    grid-column: 1 / span 2;
+}
+
+.container-sign-in button {
+    margin-top: 2rem;
+    padding: 0.2rem;
+    width: 18rem;
+    border: none;
+    border-radius: 0.5rem;
+    
+    font-weight: bold;
+    background-color: var(--color-secundario);
+    box-shadow: 0 0 10px 1px var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.container-bg-sign-in a {
+    margin: 0;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.container-bg-sign-in a span {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+

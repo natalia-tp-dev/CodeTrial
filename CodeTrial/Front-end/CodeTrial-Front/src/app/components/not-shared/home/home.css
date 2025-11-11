@@ -1,0 +1,208 @@
+:host {
+    --color-btn: rgb(255, 233, 39);
+    --color-secundario: rgb(33, 196, 255);
+}
+
+
+/*Para el container principal*/
+.container-main-img-parrafo {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Para el container del parrafo y de la imagen*/
+.container-parrafo {
+    width: 30rem;
+    margin-top: 5rem;
+}
+
+/*Para el h2 del container*/
+.container-parrafo h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+/*Para el parrafo del container*/
+.container-parrafo p {
+    padding-top: 2rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*Para el span del h2*/
+.container-parrafo h2 span {
+    background-color: var(--color-btn);
+    border-radius: 0.3rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*Para el span del p*/
+.container-parrafo p span {
+    background-color: var(--color-btn);
+    color: black;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    letter-spacing: 1px;
+}
+
+/*Para la imagen*/
+.img-container img {
+    margin-top: 5rem;
+    padding-left: 2rem;
+    width: 45rem;
+    height: 30rem;
+    border-radius: 6rem;
+    box-shadow: 0px 3px 65px 6px var(--color-secundario);
+    transition: all 1s ease-in;
+}
+
+/*Hover para la imagen*/
+.img-container img:hover {
+    width: calc(45rem + 2rem);
+    height: calc(30rem + 2rem);
+}
+
+/*Para el container del boton*/
+.container-btns {
+    display: flex;
+    justify-content: center;
+}
+
+/*Para el boton*/
+.container-parrafo button {
+    margin-top: 2rem;
+    height: 3rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: var(--color-secundario);
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 15px var(--color-secundario);
+    transition: all 1s ease-out;
+}
+
+/*Hover para el boton*/
+.container-parrafo button:hover {
+    width: calc(15rem + 0.6rem);
+    height: calc(3rem + 0.6rem);
+    font-size: 1.3rem;
+}
+
+/*Container de las cards*/
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    transition: all 0.1s ease-in;
+}
+
+/*Container del content de la card*/
+.card {
+    width: 25rem;
+    height: 25rem;
+    padding: 0.4rem;
+    border-radius: 1.5rem;
+    background-color: black;
+    box-shadow: 0 -3px 65px -20px var(--color-secundario);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    will-change: transform, opacity;
+}
+
+/*Before del container*/
+.card::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 50%;
+    animation: rotBGimg 6s linear infinite;
+    transition: all 5s ease-in;
+    background-image: linear-gradient(0deg, var(--color-btn), var(--color-secundario));
+}
+
+/*Animacion del container*/
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*After del container*/
+.card::after {
+    content: '';
+    position: absolute;
+    border-radius: 1.5rem;
+    padding: 0.4rem;
+}
+
+/*para el hover de las cards*/
+.container-cards:hover .card:hover {
+    transform: scale(1.10);
+    z-index: 10;
+    opacity: 1;
+    box-shadow: 0 -3px 65px -2px var(--color-btn);
+}
+
+/*Para el hover del container de las cards, especificamente afecta cada card*/
+.container-cards:hover .card{
+    opacity: 0.5;
+    transform: scale(0.95);
+}   
+
+
+/*contenido de la card*/
+.card-content {
+    border-radius: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*para el contenido de las cards, por ahora la imagen*/
+.card-content img {
+    height: 15rem;
+}
+
+/*Para el scroll*/
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block {
+    scroll-behavior: smooth;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.container-home {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 5rem;
+}

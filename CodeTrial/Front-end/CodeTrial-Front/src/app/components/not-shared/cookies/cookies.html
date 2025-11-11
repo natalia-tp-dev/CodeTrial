@@ -1,0 +1,18 @@
+<section style="margin-top: 100px; color: white;">
+    <div >
+        <label>Codigo: <input [(ngModel)]="codigo" /></label>
+        <label>Nombre: <input [(ngModel)]="nombre" /></label>
+    </div>
+    <div>
+        <button (click)="anadir()">Añadir Cookie</button>
+        <button (click)="borrar()">Borrar Cookies</button>
+    </div>
+
+    <h3>Cookies actuales:</h3>
+    <div *ngIf="cookies.length === 0" style="color:red;">No hay cookies guardadas</div>
+    <div *ngFor="let cookie of cookies">
+        <strong>{{ cookie.name }}:</strong> {{ cookie.value }}
+    </div>
+
+    <p>document.cookie: {{ cookiesString }}</p>
+</section>
