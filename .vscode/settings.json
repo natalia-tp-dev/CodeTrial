@@ -1,0 +1,56 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "149.130.169.172",
+            "port": 33355,
+            "driver": "PostgreSQL",
+            "name": "db-class",
+            "database": "ntrianap",
+            "username": "ntrianap",
+            "password": "ntrianap__2025"
+        },
+        {
+            "previewLimit": 50,
+            "server": "149.130.169.172",
+            "port": 33355,
+            "driver": "PostgreSQL",
+            "name": "hospital_triana_pulido",
+            "database": "ntrianap",
+            "username": "ntrianap",
+            "password": "ntrianap__2025"
+        },
+        {
+            "previewLimit": 50,
+            "server": "149.130.169.172",
+            "port": 33355,
+            "driver": "PostgreSQL",
+            "name": "conn_music4all_ntrianap",
+            "database": "music4all_ntrianap",
+            "username": "ntrianap",
+            "password": "ntrianap__2025"
+        },
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "149.130.169.172",
+            "port": 33355,
+            "driver": "PostgreSQL",
+            "name": "conn_pagila",
+            "database": "pagila__ntrianap",
+            "username": "ntrianap",
+            "password": "ntrianap__2025"
+        },
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "conn_biblioteca_triana",
+            "database": "biblioteca_sql_triana",
+            "username": "natytp",
+            "password": "naty1234"
+        }
+    ]
+}

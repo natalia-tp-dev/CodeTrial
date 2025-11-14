@@ -86,7 +86,6 @@
     width: 18rem;
     border: none;
     border-radius: 0.5rem;
-    
     font-weight: bold;
     background-color: var(--color-secundario);
     box-shadow: 0 0 10px 1px var(--color-secundario);

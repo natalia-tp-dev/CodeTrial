@@ -4,13 +4,13 @@
             <h2>Register Now !</h2>
             <p>Sign in now and get free access to our courses.</p>
             <div class="container-form">
-                <input type="text" name="FirstName" id="Firstname" placeholder="First Name">
-                <input type="text" name="LastName" id="Lastname" placeholder="Last Name">
-                <input type="text" name="Email" id="Email" placeholder="Email">
-                <input type="passowrd" name="Password" id="Password" placeholder="Enter your password">
-                <input type="passowrd" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm your password">
+                <input [(ngModel)] = "firstName" type="text" name="FirstName" id="Firstname" placeholder="First Name">
+                <input [(ngModel)] = "lastName" type="text" name="LastName" id="Lastname" placeholder="Last Name">
+                <input [(ngModel)] = "email" type="text" name="Email" id="Email" placeholder="Email">
+                <input [(ngModel)] = "password" type="passowrd" name="Password" id="Password" placeholder="Enter your password">
+                <input [(ngModel)] = "confirmPassword" type="passowrd" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm your password">
             </div>
-            <button type="submit" class="btn-register">Sign in</button>
+            <button type="submit" class="btn-register" (click)="registrar()" >Sign in</button>
             <p>Already have an account ?</p>
             <a href="">Log in <span>here</span></a>
         </form>
