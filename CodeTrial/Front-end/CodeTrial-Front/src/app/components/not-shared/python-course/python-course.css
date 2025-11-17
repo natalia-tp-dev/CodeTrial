@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Layout general*/
+.container {
+    display: flex;
+    height: 100vh;
+    margin-top: 5rem;
+    gap: 5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25rem;
+    background: #0f3f86;
+    padding: 1.7rem 1rem;
+    border-right: 2px solid #3a3c53;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.instructions {
+    height: 30rem;
+    background-color: #160d3a;
+    margin-top: 3rem;
+    color: white;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.instructions p {
+    width: 100%;
+    word-break: break-word;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: rgb(255, 254, 254);
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #1594a5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.sidebar li:hover {
+    background: #4f5270;
+}
+
+.active {
+    background: #d1b82b;
+    color: #13131f;
+    font-weight: bold;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Code box */
+.code-box {
+    width: 100%;
+    height: 250px;
+    background: #13131f;
+    border: 1px solid #3a3c53;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #00f7ff;
+    font-family: "Consolas", monospace;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Run button */
+.run-btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.8rem;
+    background: #00d47e;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.run-btn:hover {
+    transform: scale(1.05);
+    background: #00ff99;
+}
+
+.content span {
+    color: white;
+    font-size: 2.2rem;
+    margin: 6rem;
+    font-weight: bold;
+    color: chartreuse;
+}
+
+/* Output */
+.output-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #13131f;
+    border-radius: 10px;
+    border: 1px solid #3a3c53;
+}
+
+.output-box h3 {
+    margin-bottom: 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.btn-save {
+    margin-top: 2rem;
+    padding: 0.7rem 1.8rem;
+    background: #00cdd4;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 1rem;
+}

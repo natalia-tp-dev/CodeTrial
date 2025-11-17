@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70rem;
+    border-radius: 2rem;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #2291db, #dbbc0e);
+    font-weight: bold;
+    background-clip: text;
+    text-align: center;
+    color: transparent;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+}
+
+p span {
+    text-decoration: underline;
+}
+.emoji {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+

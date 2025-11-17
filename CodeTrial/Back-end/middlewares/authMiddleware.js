@@ -17,9 +17,14 @@ const auth = (req, res, next) => {
         //Saltamos al controlador
         next()
     } catch (err) {
-        console.error(err)
+        if (err.name === 'TokenExpiredError') return res.status(401).json({
+            error: 'Token expirado',
+            status: 401,
+            isLogged: false
+        })
         res.status(403).json({
-            error: 'Token invalido o expirado'
+            error: 'Token invalido o expirado',
+            status: 403
         })
     }
 }

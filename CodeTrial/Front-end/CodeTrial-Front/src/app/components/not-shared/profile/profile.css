@@ -1,0 +1,161 @@
+/* Main container */
+.main-section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Profile container */
+.profile-info-container {
+    height: 32rem;
+    width: 28rem;
+    background-color: rgba(165, 150, 17, 0.644);
+    backdrop-filter: blur(10px);
+    /* efecto vidrio */
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover profile container */
+.profile-info-container:hover {
+    transform: scale(1.05);
+    background-color: rgba(185, 161, 25, 0.774);
+}
+
+/* Profile image */
+.profile-info-container img {
+    height: 9rem;
+    width: 9rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-info-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Welcome message */
+.profile-info-container p:nth-of-type(1) {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Email */
+.profile-info-container p:nth-of-type(2) {
+    margin-top: 0.8rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.courses-info-container {
+    height: auto;
+    width: 60rem;
+    background-color: rgba(51, 30, 167, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.courses-info-container h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 18rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.course-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.dashboard p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: #2eceff;
+    border-radius: 4px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-card li {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.completed {
+    color: #00ff7f;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 8rem;
+    background-color: #2eceff;
+    font-weight: bold;
+    border-style: none;
+    box-shadow: 0 0 50px 10px #2eceff;
+    height: 2rem;
+}

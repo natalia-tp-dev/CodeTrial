@@ -8,11 +8,11 @@
     --color-links: rgb(255, 255, 255);
     --color-resaltado: rgba(53, 218, 255, 0.75);
     --tam-letra: 1.2rem;
-    --tam-letra-hover: 1,5rem;
+    --tam-letra-hover: 1, 5rem;
 }
 
 /*Para el header*/
-.header{
+.header {
     background-color: var(--color-resaltado);
     width: 100%;
     color: rgb(0, 0, 0);
@@ -23,7 +23,7 @@
 }
 
 /*Para el link del header*/
-.header a{
+.header a {
     color: rgb(190, 190, 34);
 }
 
@@ -33,12 +33,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; 
+    z-index: 10;
 }
+
 /*Para el header de la navbar*/
 .nav-header a {
     font-weight: bold;
@@ -54,6 +55,7 @@
     color: var(--color-resaltado);
     transition: all 1s;
 }
+
 /*Para la imagen del logo de la navbar*/
 .nav img {
     height: 5rem;
@@ -100,23 +102,52 @@
 }
 
 /*Para el boton de la navbar*/
-.nav button {
+.btn-join {
     font-weight: bolder;
     text-decoration: none;
     border: none;
     height: 1.8rem;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     background-color: var(--color-borde-nav);
-    width: 13rem;
+    width: 11rem;
     box-shadow: 0 0 15px var(--color-borde-nav);
-    margin-right: 2rem;
-    transition: all 1s;
+    margin-right: 0.2rem;
+    transition: all 0.3s ease-in-out;
 }
 
 /*Hover para el boton*/
-.nav button:hover {
-    height: 2.2rem;
-    width: 13.5rem;
-    font-size: 1.3rem;
+.btn-join:hover {
+    transform: scale(105%);
+    font-size: 1.1rem;
     transition: all 1s;
+    background-color: darkgoldenrod;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px 2px darkgoldenrod;
+}
+
+/*Boton de log out*/
+.btn-LogOut{
+    background-color: rgb(190, 26, 26);
+    font-weight: bolder;
+    text-decoration: none;
+    border: none;
+    height: 1.8rem;
+    border-radius: 0.2rem;
+    width: 11rem;
+    box-shadow: 0 0 15px red;
+    margin-right: 2rem;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Hover para el boton de log out*/
+.btn-LogOut:hover {
+    transform: scale(105%);
+    font-size: 1.1rem;
+    transition: all 1s;
+    background-color: rgb(228, 30, 30);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px 5px red;
 }

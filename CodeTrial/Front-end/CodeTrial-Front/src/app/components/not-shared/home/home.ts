@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChildren, AfterViewInit, QueryList } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,23 +7,19 @@ import { Component, ElementRef, OnInit, ViewChildren, AfterViewInit, QueryList }
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home implements AfterViewInit{
+export class Home {
+  //Inyeccion
+  router = inject(Router)
 
-  //Animacion de scroll 
-  @ViewChildren('observado') observados!: QueryList<ElementRef>
+  ingresarCursos(){
+    this.router.navigate(['/courses'])
+  }
 
-  ngAfterViewInit(){
-    const observador = new IntersectionObserver(
-      entries => {
-      entries.forEach(entry => {
-        const el = entry.target as HTMLElement
-        if(entry.isIntersecting){
-          el.classList.add('visible')
-        } else {
-          el.classList.remove('visible')
-        }
-      })
-    })
-    this.observados.forEach(el => observador.observe(el.nativeElement))
+  about(){
+    this.router.navigate(['/about'])
+  }
+
+  ingresarPython(){
+    this.router.navigate(['/python-course'])
   }
 }

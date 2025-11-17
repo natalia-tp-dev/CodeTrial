@@ -1,0 +1,31 @@
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Lessons</h2>
+        <ul>
+            @for (lesson of profile?.user?.courses?.[0]?.lessons; track $index) {
+                <li 
+                (click)="agregarInstrucciones($index)">
+                Lesson {{$index+1}}</li>
+            }
+        </ul>
+        <div class="instructions">
+            <h4>Instructions</h4>
+            <p #instrucciones></p>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <section class="content">
+        <h1>Code Editor</h1>
+        <textarea #codeBox [(ngModel)]="codigo" class="code-box" placeholder="Write your code right here"></textarea>
+        <button (click)="execute()" class="run-btn">Run</button>
+        <span #isCompleted></span>
+        <div class="output-box">
+            <h3>Ouput:</h3>
+            <p style="color: aliceblue;" #output></p>
+        </div>
+        <button class="btn-save" (click)="guardar()">Save progress</button>
+    </section>
+</div>

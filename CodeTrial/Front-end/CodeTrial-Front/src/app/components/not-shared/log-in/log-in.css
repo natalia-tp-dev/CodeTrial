@@ -13,46 +13,55 @@
 }
 
 /*Para el container del sign in*/
-.container-bg-sign-in {
+.container-bg-log-in {
     margin-top: 6rem;
     background: linear-gradient(120deg, var(--color-btn), var(--color-secundario));
     border-radius: 2rem;
-    width: 32.5rem;
-    height: 34rem;
+    width: 25rem;
+    height: 30rem;
     display: flex;
     justify-content: center;
     padding: 0.2rem;
     position: relative;
+    box-shadow:
+        0 8px 50px 0 rgb(15, 181, 223),
+        0 0 20px 0 rgb(251, 255, 5);
+
 }
 
 /*Para el before del container del sign in*/
-.container-bg-sign-in::before {
+.container-bg-log-in::before {
     background: linear-gradient(120deg, var(--color-btn), var(--color-secundario));
     position: absolute;
 
 }
 
 /*Para el container del sign in*/
-.container-sign-in {
+.container-log-in {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #01031b;
+    background: #01031b00;
     width: 32rem;
-    padding: 2rem;
     overflow: hidden;
     border-radius: 2rem;
 }
 
 /*Para el h2 del sign in*/
-.container-sign-in h2 {
+.container-log-in h2 {
     color: white;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #020227;
+    height: 5rem;
 }
 
 /*Para el p del sign in*/
-.container-sign-in p {
+.container-log-in p {
     color: #ccc;
     margin-bottom: 1rem;
     text-align: center;
@@ -60,10 +69,10 @@
 
 /*Para el container del form*/
 .container-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /*Para los inputs del form*/
@@ -71,47 +80,57 @@
     padding: 0.8rem 1rem;
     border: 1px solid rgb(54, 62, 70);
     border-radius: 0.5rem;
-    background: #222;
+    background: #020227;
     color: #fff;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    width: 20rem;
 }
 
 /*Para el focus de los inputs del form*/
 .container-form input:focus {
     outline: none;
     background: #333;
-    box-shadow: 0 0 10px var(--color-btn, #00bfff);
-}
-
-/*Para la organizacion de los inputs*/
-.container-form input:nth-child(n+3) {
-    grid-column: 1 / span 2;
+    box-shadow: 0 0 10px var(rgb(0, 0, 0));
 }
 
 /*Para el button del container del sign in*/
-.container-sign-in button {
-    margin-top: 2rem;
+.container-log-in button {
+    margin-top: 3rem;
     padding: 0.2rem;
     width: 18rem;
     border: none;
     border-radius: 0.5rem;
     font-weight: bold;
-    background-color: var(--color-secundario);
-    box-shadow: 0 0 10px 1px var(--color-secundario);
+    background-color: #080e6d;
+    box-shadow: 0 0 10px 1px #080e6d;
     margin-bottom: 1rem;
+    height: 3.2rem;
+    color: white;
 }
 
 /*Para la a del container del sign in*/
-.container-bg-sign-in a {
+.container-bg-log-in a {
     margin: 0;
     text-decoration: none;
     color: #ccc;
 }
 
 /*Para el a que sea span del container del sign in*/
-.container-bg-sign-in a span {
+.container-bg-log-in a span {
     color: #fff;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #020227;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 7rem;
 }

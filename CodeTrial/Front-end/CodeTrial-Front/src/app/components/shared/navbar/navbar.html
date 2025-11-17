@@ -2,7 +2,7 @@
 <section class="nav-container">
     <div class="header">
         <span>
-            <p>Check out our beginner course for Java <a href="">here</a>!</p>
+            <p>Check out our beginner course for Java <a routerLink="/courses">here</a>!</p>
         </span>
     </div>
     <nav class="navbar nav">
@@ -14,9 +14,21 @@
             <span class="nav-links">
                 <a routerLink="home">Home</a>
                 <a routerLink="cookies">Cookies</a>
+                @if(isLogged){
+                <a routerLink="profile">My profile</a>
+                }
             </span>
             <span>
-                <button routerLink="sign-in" type="button">Join Us</button>
+                @if (!isLogged){
+                <button class="btn-join" routerLink="sign-in" type="button">
+                    Join Us
+                </button>
+                }
+                @if (isLogged){
+                <button class="btn-LogOut" (click)="logout()">
+                    Log out
+                </button>
+                }
             </span>
         </div>
     </nav>

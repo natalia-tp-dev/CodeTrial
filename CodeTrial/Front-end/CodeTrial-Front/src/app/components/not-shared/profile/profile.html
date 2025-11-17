@@ -1,0 +1,40 @@
+<section class="main-section">
+    <div class="profile-info-container">
+        <img src="concepto-emociones-personas-foto-cabeza-hombre-atractivo-feliz-riendo-sonriendo-exprese-regocijo_1258-26742.avif"
+            alt="">
+        <p>{{message}}</p>
+        <p>{{email}}</p>
+    </div>
+    <div class="courses-info-container">
+        <h2>My Courses</h2>
+
+        <div class="courses-grid">
+            @for (course of profile.user.courses; track $index) {
+            <div class="course-card">
+                <h3>{{ course?.courseName }}</h3>
+
+                <div class="dashboard">
+                    <p>Progress: {{ getProgress(course) }}%</p>
+                    <div class="progress-bar">
+                        <div class="progress" [style.width.%]="getProgress(course)"></div>
+                    </div>
+                </div>
+
+                <ul>
+                    @for (lesson of course.lessons; track $index) {
+                    <li>
+                        Lesson {{ lesson.lessonNumber }} -
+                        <span [class.completed]="lesson.isCompleted">
+                            {{ lesson.isCompleted ? 'Completed' : 'Pending' }}
+                        </span>
+                        
+                    </li>
+                    }
+                    <button (click)="openPython()">Get into it</button>
+                </ul>
+            </div>
+            }
+
+        </div>
+    </div>
+</section>
