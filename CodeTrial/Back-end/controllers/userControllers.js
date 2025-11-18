@@ -258,7 +258,7 @@ const actualizarCodigo = async (req, res) => {
 }
 
 //Obtener codigo
-const obtenerCodigo = async (req, res) => {
+const obtenerCodigoEstado = async (req, res) => {
     const { email } = req.user
     const lessonNumber  = req.query.lessonNumber
     console.log(lessonNumber);
@@ -286,8 +286,10 @@ const obtenerCodigo = async (req, res) => {
         })
     }
     const code = Lesson.code
+    const isCompleted = Lesson.isCompleted
     res.json({
         code,
+        isCompleted,
         status: 201
     })
 }
@@ -338,4 +340,4 @@ const eliminarUsuarios = async () => {
     }
 }
 
-module.exports = { registrarUsuario, iniciarUsuario, obtenerPerfil, logOut, actualizarCodigo, eliminarUsuarios, ejecutar, obtenerCodigo, actualizarEstado }
+module.exports = { registrarUsuario, iniciarUsuario, obtenerPerfil, logOut, actualizarCodigo, eliminarUsuarios, ejecutar, obtenerCodigoEstado, actualizarEstado }

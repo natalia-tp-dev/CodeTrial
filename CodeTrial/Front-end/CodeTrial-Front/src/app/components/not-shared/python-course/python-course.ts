@@ -71,6 +71,11 @@ export class PythonCourse implements OnInit {
         } else {
           this.codigo = '#You do not have any saved code in lesson ' + (this.indiceSeleccionadoLeccion + 1)
         }
+        if (!res.isCompleted) {
+          this.isCompleted.nativeElement.textContent = ''
+        } else {
+          this.isCompleted.nativeElement.textContent = 'COMPLETED'
+        }
       }
     })
   }
@@ -89,7 +94,6 @@ export class PythonCourse implements OnInit {
             icon: 'success',
             text: 'The lesson was succesfully completed'
           })
-          this.isCompleted.nativeElement.textContent = 'COMPLETED'
           this.auth.updateState(true, this.indiceSeleccionadoLeccion + 1).subscribe({})
           this.auth.getPerfil().subscribe(profile => {
             this.profile = profile;

@@ -51,6 +51,17 @@
             "database": "biblioteca_sql_triana",
             "username": "natytp",
             "password": "naty1234"
+        },
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "149.130.169.172",
+            "port": 33358,
+            "driver": "PostgreSQL",
+            "name": "conn",
+            "database": "biblioteca_sql_triana",
+            "username": "admin",
+            "password": "sistema_recargas_viajes_db_p4ss"
         }
     ]
 }
